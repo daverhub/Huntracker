@@ -1,0 +1,20 @@
+test
+<%= form_tag(root_path, method: "get") do %>
+  <%= text_field_tag(:q) %>
+  <%= text_field_tag(:l) %>
+  <%= submit_tag("Search") %>
+  <% end %>
+  <ul>
+    <% @results.each do |job| %>
+    <li>
+      <div class="">
+        <p>
+          <b><%= link_to job.job_title, job.url, target: "_blank" %></b>
+        </p>
+        <p><%= job.company %></p>
+        <p><%= job.formatted_location %></p>
+        <p><%= job.snippet %></p>
+      </div>
+      <% end %>
+    </li>
+  </ul>
