@@ -1,0 +1,37 @@
+<%= form_for @job do |f| %>
+  <div class="row">
+  <div class="medium-2 large-2 columns">
+    <%= f.label :title, "Title:" %>
+    <%= f.text_field :title %>
+
+    <%= f.label :company, "Company:" %>
+    <%= f.text_field :company %>
+
+    <%= f.label :url, "Url:" %>
+    <%= f.text_field :url %>
+
+    <%= f.label :city, "city:" %>
+    <%= f.text_field :city %>
+
+    <%= f.label :state, "state:" %>
+    <%= f.text_field :state %>
+
+    <%= f.label :country, "country:" %>
+    <%= f.text_field :country %>
+
+  </div>
+
+  <div class="medium-10 large-10 columns">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="medium-10 large-10 columns"></div>
+  <div class="medium-2 large-2 columns">
+    <%= f.submit (f.object.new_record? ? "Submit review" : "Edit review"),
+      class: "button tiny success" %>
+  </div>
+  </div>
+<%-end-%>

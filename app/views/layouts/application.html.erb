@@ -6,13 +6,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  
   <nav class="top-bar">
     <ul class="title-area">
       <li class="name">
         <h1><a href="/">Huntrack</a></h1>
       </li>
     </ul>
+
 
     <section class="top-bar-section">
       <ul class="right">
@@ -26,14 +26,25 @@
     </section>
   </nav>
 
+    <strong class="hide-for-small-only">
+       <div  class="small-2 column" id="magellan_bar">
+        <ul class="magellan tabs vertical" data-magellan-expedition="fixed" id="magellan_bar">
+          <li data-magellan-arrival="grid"><%= link_to "MyJobs", jobs_path %></li>
+          <li data-magellan-arrival="tabs"><a href="#tabs">Tabs</a></li>
+          <li data-magellan-arrival="buttons"><a href="#buttons">Buttons</a></li>
+        </ul>
+      </div>
+    </strong>
+
+
   <%- flash.each do |key, value| -%>
     <div class="flash flash-<%= key %>">
       <%= value %>
     </div>
   <%- end -%>
-
-  <%= yield %>
-
+  <div class="large-8 push-1 column">
+    <%= yield %>
+  </div>
   <%= javascript_include_tag 'application' %>
   <%= yield :extra_footer %>
 </body>

@@ -16,7 +16,7 @@ class IndeedController < ApplicationController
       @jobs =[]
       @results = []
     end
-    binding.pry
+    @results = Kaminari.paginate_array(@results).page(params[:page]).per(10)
   end
 
   def new

@@ -12,6 +12,7 @@ gem 'devise'
 gem 'foundation-rails'
 gem 'indeed_api'
 gem 'httparty'
+gem 'kaminari'
 
 group :development, :test do
   gem 'byebug'
