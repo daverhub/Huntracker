@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  root 'indeed#index'
+  root 'searches#index'
   devise_for :users
   resources :jobs
-  resources :indeed
-  
+  resources :searches
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

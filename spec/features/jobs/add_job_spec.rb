@@ -9,10 +9,13 @@ feature "adding job to watch list" do
     end
 
     scenario 'successfully adds job' do
-      click_on 'Add job'
+      visit new_job_path
+
       fill_in "Title", with: "software engineer"
       fill_in "Company", with: "Launch Academy"
-      click_on "Submit"
+      binding.pry
+      click_on "Add Job"
+
 
       expect(page).to have_content("New Job Added")
       expect(page).to have_content("software engineer")

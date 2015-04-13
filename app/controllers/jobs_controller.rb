@@ -1,4 +1,5 @@
 class JobsController < ApplicationController
+  before_action :authenticate_user!, only: [:create]
   def index
     if params[:job].present?
       job = IndeedAPI.get_job(params[:job])
@@ -18,19 +19,18 @@ class JobsController < ApplicationController
   end
 
   def create
-    @job = Job.save_data_from_indeed(params[:job])
-    @job = current_user.jobs.new(job_params)
-    if @job.save
-      flash[:notice] = "New Job Added"
-      redirect_to @job
-    else
-      flash[:notice] = @job.errors.full_messages.join(", ")
-      render :new
-    end
-  end
+      @job = current_user.jobs.new(job_params)
+      @job.job_key = @job.title
+      if @job.save
+        flash[:notice] = "New Job Added"
+        @job.job_key = @job.id
 
-  def add_api_job
-    save_data_from_indeed
+        redirect_to @job
+      else
+        flash[:notice] = @job.errors.full_messages.join(", ")
+        render :new
+      end
+
   end
 
   protected

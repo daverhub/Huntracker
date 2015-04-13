@@ -1,4 +1,4 @@
-class IndeedController < ApplicationController
+class SearchesController < ApplicationController
   def index
     if params[:q].present?
       @jobs = IndeedAPI.search_jobs(q: params[:q], l: params[:l])
@@ -17,10 +17,6 @@ class IndeedController < ApplicationController
       @results = []
     end
     @results = Kaminari.paginate_array(@results).page(params[:page]).per(10)
-  end
-
-  def new
-    @indeed = Indeed::Client.new "YOUR_PUBLISHER_NUMBER"
   end
 
   protected

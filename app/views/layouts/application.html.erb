@@ -27,7 +27,7 @@
   </nav>
 
     <strong class="hide-for-small-only">
-       <div  class="small-2 column" id="magellan_bar">
+       <div  class="small-3 column" id="magellan_bar">
         <ul class="magellan tabs vertical" data-magellan-expedition="fixed" id="magellan_bar">
           <li data-magellan-arrival="grid"><%= link_to "My_Jobs", jobs_path %></li>
           <li data-magellan-arrival="tabs"><%= link_to "Add_Job", new_job_path %></li>
@@ -36,14 +36,15 @@
       </div>
     </strong>
 
-
-  <%- flash.each do |key, value| -%>
-    <div class="flash flash-<%= key %>">
-      <%= value %>
+    <div class="container">
+    <%- flash.each do |key, value| -%>
+      <div class="flash flash-<%= key %>">
+        <%= value %>
+      </div>
+    <%- end -%>
+    <div class="large-8 push-1 column">
+      <%= yield %>
     </div>
-  <%- end -%>
-  <div class="large-8 push-1 column">
-    <%= yield %>
   </div>
   <%= javascript_include_tag 'application' %>
   <%= yield :extra_footer %>

@@ -1,0 +1,16 @@
+$main-color: green;
+$font-sans: Helvetica, Arial, sans-serif;
+
+
+#magellan_bar {
+  min-width: 8%;
+  max-width: 8%;
+  list-style-type: none;
+  background-color: $main-color;
+  font-family: $font-sans;
+}
+.container {
+  margin-left: 10%;
+  margin-right: 10%;
+
+}

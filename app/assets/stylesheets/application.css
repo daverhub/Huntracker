@@ -15,9 +15,4 @@
  *= require foundation_and_overrides
 
  */
- #magellan_bar {
-   min-width: 0;
-   max-width: 8%;
-   list-style-type: none;
- }
- .inline { display: inline; }
+ 
