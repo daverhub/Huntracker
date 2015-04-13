@@ -1,6 +1,6 @@
 <%= form_for @job do |f| %>
   <div class="row">
-  <div class="medium-2 large-2 columns">
+  <div class="medium-5 large-5 columns">
     <%= f.label :title, "Title:" %>
     <%= f.text_field :title %>
 
@@ -19,9 +19,6 @@
     <%= f.label :country, "country:" %>
     <%= f.text_field :country %>
 
-  </div>
-
-  <div class="medium-10 large-10 columns">
     <%= f.label :description %>
     <%= f.text_area :description %>
   </div>

@@ -1,25 +1,23 @@
-<%= link_to "Add Job", new_job_path %>
+
 <div class="inline">
-
-
 <%= form_for("indeed#index", method: "get") do %>
-  <%= text_field_tag(:q) %><%= text_field_tag(:l) %>
+  <%= text_field_tag(:q) %>
+  <%= text_field_tag(:l) %>
 
   <%= submit_tag("Search") %>
   <% end %>
 </div>
-  <ul>
-    <% @results.each do |job| %>
-      <div class="panel callout radius">
-        <p>
-          <b><%= link_to job.job_title, job.url, target: "_blank" %></b>
-        </p>
-        <p><%= job.company %></p>
-        <p><%= job.formatted_location %></p>
-        <p><%= job.snippet %></p>
-        <p><%= link_to "Add job", {:controller => "jobs", :action => "create", :job => job.job_key } %></p>
-      </div>
-
-      <% end %>
-  </ul>
-  <%= paginate @results %>
+<ul>
+  <% @results.each do |job| %>
+    <div class="panel callout radius">
+      <p>
+        <b><%= link_to job.job_title, job.url, target: "_blank" %></b>
+      </p>
+      <p><%= job.company %></p>
+      <p><%= job.formatted_location %></p>
+      <p><%= job.snippet %></p>
+      <p><%= link_to "Add job", {:controller => "jobs", :action => "create", :job => job.job_key } %></p>
+    </div>
+  <% end %>
+</ul>
+<%= paginate @results %>
