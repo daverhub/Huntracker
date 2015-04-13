@@ -26,3 +26,4 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+[![Build Status](https://travis-ci.org/daverhub/huntracker.svg?branch=master)](https://travis-ci.org/daverhub/huntracker) [![Code Climate](https://codeclimate.com/github/daverhub/huntracker.png)](https://codeclimate.com/github/daverhub/huntracker) [![Coverage Status](https://coveralls.io/repos/daverhub/huntracker/badge.png)](https://coveralls.io/r/daverhub/huntracker
