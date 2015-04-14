@@ -14,7 +14,7 @@ feature "add notes to a saved Job" do
       visit job_path(job)
       fill_in "Notes", with: "will apply by tommorrow"
       click_on "Save"
-      save_and_open_page
+
       expect(page).to have_content("Tracking saved")
     end
   end

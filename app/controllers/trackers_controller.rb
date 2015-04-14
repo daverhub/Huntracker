@@ -22,10 +22,15 @@ class TrackersController < ApplicationController
       render :new
     end
   end
+
   protected
+  
   def tracker_params
     params.require(:tracker).permit(
-        :applied, :followup, :interviewed, :notes
+        :applied,
+        :followup,
+        :interviewed,
+        :notes
     )
   end
 end
