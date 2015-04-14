@@ -2,8 +2,4 @@ language: ruby
 rvm:
   - 2.0.0
 before_script:
-  - psql -c 'create database airlines_test;' -U postgres
-env:
-  global:
-  - secure: ark0NjMMGOZtjWAPrOtN8tAGgZL/DSgU/EahlqdU8Ky18Qj133wj6CeFk6Y0oUsVBlKDSyDt8V+T0Ey5sgyoddeagS+mCjbp/Nvz3veE/HiBVdCawhtbSQa4QRDvnVYRi15L4tGYRG5slWddSRwpk4bq6NS4v4Iqtj94PHUxeq8=
-  - secure: TdOVaDpJXbmsLT090Vi7yRPeGluNFsM3ZJTRUZWVqEcrz6UHxyd9ePP6tkRkNG9ITl1IP5P+cUfWhylBeQOJxgpTiump47jSGC4wnYddUD9dk1uBO1kgT0IU0GJmdPlgrFtK/sRUlJ87koRAawn2R4wlEPBmQTksravA24RirnE=
+  - psql -c 'create database huntracker_test;' -U postgres
