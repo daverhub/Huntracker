@@ -1,7 +1,6 @@
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def linkedin
-    auth = env["omniauth.auth"]
-    @user = User.connect_to_linkedin(request.env["omniauth.auth"],current_user)
+    @user = User.connect_to_linkedin(request.env["omniauth.auth"], current_user)
     if @user.persisted?
       flash[:notice] = "Succesfully signed in with linkedin"
       # flash[:notice] = I18n.t "devise.omniauth_callbacks.success"

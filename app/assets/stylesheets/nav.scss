@@ -3,13 +3,13 @@ $font-sans: Helvetica, Arial, sans-serif;
 $button-color: #1E90FF;
 
 #magellan_bar {
-  min-width:0;
+  min-width: 0;
   width: auto;
-  margin:0 auto;
+  margin: 0 auto;
   margin-left: 5%;
   list-style-type: none;
-
 }
+
 .container {
   margin-left: 10%;
   margin-right: 5%;
@@ -55,6 +55,6 @@ $button-color: #1E90FF;
 }
 
 .flash {
-  text-align: center;
   margin-right: 20%;
+  text-align: center;
 }
