@@ -3,13 +3,13 @@ $font-sans: Helvetica, Arial, sans-serif;
 $button-color: #1E90FF;
 
 #magellan_bar {
-  min-width:0;
-     width: auto;
-    margin:0 auto;
-    margin-left: 5%;
-    list-style-type: none;
-
+  min-width: 0;
+  width: auto;
+  margin: 0 auto;
+  margin-left: 5%;
+  list-style-type: none;
 }
+
 .container {
   margin-left: 10%;
   margin-right: 5%;
@@ -28,10 +28,12 @@ $button-color: #1E90FF;
     }
 
 }
+
 .form {
   margin-left: 10%;
 
 }
+
 .inline_search{
   display: inline-block;
   input {
@@ -43,7 +45,6 @@ $button-color: #1E90FF;
       background-color: darken($button-color, 30%);
     }
   }
-
 }
 
 .text_field {
@@ -51,4 +52,9 @@ $button-color: #1E90FF;
     height: 5000px;
     width: 3000px;
   }
+}
+
+.flash {
+  margin-right: 20%;
+  text-align: center;
 }
