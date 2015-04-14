@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150410003358) do
+ActiveRecord::Schema.define(version: 20150414145621) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,17 @@ ActiveRecord::Schema.define(version: 20150410003358) do
     t.string   "url"
     t.string   "job_key"
     t.integer  "user_id",     null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "tracker_id"
+  end
+
+  create_table "trackers", force: :cascade do |t|
+    t.boolean  "applied"
+    t.boolean  "followup"
+    t.boolean  "interviewed"
+    t.text     "notes"
+    t.integer  "job_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
