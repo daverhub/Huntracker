@@ -1,5 +1,5 @@
 class JobsController < ApplicationController
-  before_action :authenticate_user!, only: [:create]
+  before_action :authenticate_user!, only: [:index, :show, :new, :create]
   def index
     if params[:job].present?
       job = IndeedAPI.get_job(params[:job])
@@ -12,6 +12,7 @@ class JobsController < ApplicationController
 
   def show
     @job = Job.find(params[:id])
+    @tracker = @job.tracker || Tracker.new
   end
 
   def new
