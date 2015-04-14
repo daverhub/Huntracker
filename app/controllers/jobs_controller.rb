@@ -12,7 +12,11 @@ class JobsController < ApplicationController
 
   def show
     @job = Job.find(params[:id])
-    @tracker = @job.tracker || Tracker.new
+    if @job.tracker
+      @tracker = @job.tracker
+    else
+      @tracker = Tracker.new
+    end
   end
 
   def new
