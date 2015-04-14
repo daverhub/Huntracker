@@ -13,6 +13,9 @@ gem 'foundation-rails'
 gem 'indeed_api'
 gem 'httparty'
 gem 'kaminari'
+gem 'omniauth'
+gem 'omniauth-linkedin'
+gem 'dotenv-rails'
 
 group :development, :test do
   gem 'byebug'
