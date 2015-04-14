@@ -1,10 +1,17 @@
 
-<div class="inline">
+<div class="form">
 <%= form_for("searches#index", method: "get") do %>
-  <%= text_field_tag(:q) %>
-  <%= text_field_tag(:l) %>
-
-  <%= submit_tag("Search") %>
+  <div class="inline">
+    <label class="orange" for="What">what:</label>
+    <%= text_field_tag(:q) %>
+  </div>
+  <div class="inline">
+    <label for="Where">where:</label>
+    <%= text_field_tag(:l) %>
+  </div>
+  <div class="inline_search">
+    <%= submit_tag("Find Jobs") %>
+  </div>
   <% end %>
 </div>
 <ul>

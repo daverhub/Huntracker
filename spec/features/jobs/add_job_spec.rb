@@ -13,7 +13,6 @@ feature "adding job to watch list" do
 
       fill_in "Title", with: "software engineer"
       fill_in "Company", with: "Launch Academy"
-      binding.pry
       click_on "Add Job"
 
 

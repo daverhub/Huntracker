@@ -1,16 +1,47 @@
 $main-color: green;
 $font-sans: Helvetica, Arial, sans-serif;
-
+$button-color: #1E90FF;
 
 #magellan_bar {
-  min-width: 8%;
-  max-width: 8%;
-  list-style-type: none;
-  background-color: $main-color;
-  font-family: $font-sans;
+  min-width:0;
+     width: auto;
+    margin:0 auto;
+    margin-left: 5%;
+    list-style-type: none;
+
 }
 .container {
   margin-left: 10%;
-  margin-right: 10%;
+  margin-right: 5%;
+
+}
+
+.inline {
+  display: inline-block;
+
+  input {
+    width:280px;
+  }
+  label {
+      color: orange;
+      font-weight: bold;
+    }
+
+}
+.form {
+  margin-left: 10%;
+
+}
+.inline_search{
+  display: inline-block;
+  input {
+    color: white;
+    background-color: $button-color;
+    border-radius: 10%;
+    border: transparent;
+    &:hover {
+      background-color: darken($button-color, 30%);
+    }
+  }
 
 }
