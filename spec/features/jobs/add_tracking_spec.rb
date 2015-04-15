@@ -24,7 +24,7 @@ feature "add notes to a saved Job" do
       fill_in "Notes", with: "will apply by tommorrow"
       click_on "Save"
       fill_in "Notes", with: "write coverletter"
-      click_on "Update"
+      click_on "update"
       expect(page).to have_content("Tracking updated")
     end
   end
