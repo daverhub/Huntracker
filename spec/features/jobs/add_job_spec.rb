@@ -26,7 +26,6 @@ feature "adding job to watch list" do
       fill_in "Company", with: ""
       click_on "Add Job"
 
-
       expect(page).to have_content("Title can't be blank")
       expect(page).to have_content("Company can't be blank")
     end
