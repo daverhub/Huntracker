@@ -19,5 +19,16 @@ feature "adding job to watch list" do
       expect(page).to have_content("New Job Added")
       expect(page).to have_content("software engineer")
     end
+    scenario 'fail to add job' do
+      visit new_job_path
+
+      fill_in "Title", with: ""
+      fill_in "Company", with: ""
+      click_on "Add Job"
+
+
+      expect(page).to have_content("Title can't be blank")
+      expect(page).to have_content("Company can't be blank")
+    end
   end
 end
