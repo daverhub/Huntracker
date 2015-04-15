@@ -2,7 +2,7 @@ require 'rails_helper'
 
 feature "paginating API search" do
   scenario "user visits index and searches for job" do
-    visit root_path
+    visit searches_path
 
     fill_in :q, with: "software engineer"
     click_on "Find Jobs"
@@ -11,7 +11,7 @@ feature "paginating API search" do
   end
 
   scenario "user clicks next to see additional search results" do
-    visit root_path
+    visit searches_path
 
     fill_in :q, with: "software engineer"
     click_on "Find Jobs"

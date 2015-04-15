@@ -1,5 +1,5 @@
 $main-color: green;
-$font-sans: Helvetica, Arial, sans-serif;
+$font-sans: Verdana, Arial, Helvetica, sans-serif;
 $button-color: #1E90FF;
 
 #magellan_bar {
@@ -9,31 +9,59 @@ $button-color: #1E90FF;
   margin-left: 5%;
   list-style-type: none;
 }
-
+.top-bar {
+  background-color: #3f3f3f;
+}
+h3{
+  font-family: $font-sans;
+}
+h2{
+  color: white;
+}
+body{
+  background-color: #e9e9e9;
+  font-family: $font-sans;
+}
+body.home{
+  background-size: relative;
+  background-image: url("http://jarques.me/img/potd_sept_30.jpg");
+}
 .container {
   margin-left: 10%;
   margin-right: 5%;
-
 }
 
 .inline {
   display: inline-block;
-
   input {
     width:280px;
+    border-radius: 5%;
   }
   label {
       color: orange;
       font-weight: bold;
+      span{
+        color: gray;
+        font-size: 10px;
+      }
     }
-
 }
-
+.block {
+  display: inline-block;
+}
 .form {
   margin-left: 10%;
-
+  display: inline-block;
 }
-
+.centered_bar {
+  margin-top: 10em;
+  margin-left: 10%;
+}
+.home_text{
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
 .inline_search{
   display: inline-block;
   input {
@@ -46,14 +74,30 @@ $button-color: #1E90FF;
     }
   }
 }
+.job_deets{
+  font-family: Arial,sans-serif;
+  font-size: 10pt;
+  line-height: 1.3;
+}
+.sub-nav {
+  margin-left: 18%;
+}
+
+.panel{
+  background-color: #fff;
+  box-shadow: 0 1px 1px
+}
 
 .text_field {
   input {
-    height: 5000px;
-    width: 3000px;
   }
 }
-
+.tracking{
+  a {
+    color: purple;
+    font-size: 12px;
+  }
+}
 .flash {
   margin-right: 20%;
   text-align: center;

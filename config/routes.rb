@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'searches#index'
+  root 'homes#index'
   devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
   resources :jobs do
     resources :trackers

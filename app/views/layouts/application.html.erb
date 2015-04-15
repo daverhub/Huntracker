@@ -9,11 +9,10 @@
   <nav class="top-bar">
     <ul class="title-area">
       <li class="name">
-        <h1><a href="/">Huntrack</a></h1>
+        <h1><a href="/">Huntracker</a></h1>
       </li>
     </ul>
-
-
+    
     <section class="top-bar-section">
       <ul class="right">
         <%- if current_user -%>
@@ -26,16 +25,11 @@
       </ul>
     </section>
   </nav>
-
-    <strong class="hide-for-small-only">
-      <div  class="small-3 column" id="magellan_bar">
-       <ul class="magellan tabs vertical" data-magellan-expedition="fixed" id="magellan_bar">
-         <li data-magellan-arrival="grid"><%= link_to "My_Jobs", jobs_path %></li>
-         <li data-magellan-arrival="tabs"><%= link_to "Add_Job", new_job_path %></li>
-         <li data-magellan-arrival="buttons"><%= link_to "Search", root_path %></li>
-       </ul>
-      </div>
-    </strong>
+  <dl class="sub-nav">
+    <dd><a href="/">Home</a></dd>
+    <dd><a href="/jobs">My Jobs</a></dd>
+    <dd><a href="/searches">Search</a></dd>
+  </dl>
 
     <div class="container">
     <%- flash.each do |key, value| -%>

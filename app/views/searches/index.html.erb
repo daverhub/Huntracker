@@ -1,12 +1,16 @@
 
 <div class="form">
-<%= form_for("searches#index", method: "get") do %>
+  <%= form_for("searches#index", method: "get") do %>
   <div class="inline">
-    <label class="orange" for="What">what:</label>
-    <%= text_field_tag(:q) %>
+    <label for="What">what:
+      <span class"search_bar">job title, keywords or company name</span>
+  </label>
+      <%= text_field_tag(:q) %>
   </div>
   <div class="inline">
-    <label for="Where">where:</label>
+    <label for="Where">where:
+      <span class"search_bar">city, state or zip code</span>
+    </label>
     <%= text_field_tag(:l) %>
   </div>
   <div class="inline_search">
@@ -16,18 +20,21 @@
 </div>
 <ul>
   <% @results.each do |job| %>
-    <div class="panel callout radius">
-      <p>
-        <b><%= link_to job.job_title, job.url, target: "_blank" %></b>
-      </p>
-      <p><%= job.company %></p>
-      <p><%= job.formatted_location %></p>
-      <p><%= job.snippet %></p>
-      <% if current_user && !current_user.jobs.select{ |j| j.job_key == job.job_key}.empty? %>
-      <%= link_to 'Remove job', job_path(job), method: :delete %>
-      <% else %>
-      <p><%= link_to "Add job", {:controller => "jobs", :action => "create", :job => job.job_key } %></p>
-      <% end %>
+    <div class="panel">
+      <div class="job_deets">
+        <b><%= link_to job.job_title, job.url, target: "_blank" %></b><br>
+        <b>Company:</b> <%= job.company %><br>
+        <b>Location:</b> <%= job.formatted_location %><br>
+        <b>Description:</b> <%= job.snippet %>
+      </div>
+        <div class="add_remove">
+        <% if current_user && !current_user.jobs.select{ |j| j.job_key == job.job_key}.empty? %>
+          <%= link_to 'Remove job', job_path(job), method: :delete %>
+        <% else %>
+          <%= link_to "Add job", {:controller => "jobs", :action => "create", :job => job.job_key } %>
+        <% end %>
+       </div>
+
     </div>
   <% end %>
 </ul>

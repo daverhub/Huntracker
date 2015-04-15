@@ -9,7 +9,7 @@ feature "adding job to watch list from API" do
     end
 
     scenario 'successfully adds job' do
-      visit root_path
+      visit searches_path
 
       fill_in :q, with: "software engineer"
       click_on "Find Jobs"
@@ -20,7 +20,7 @@ feature "adding job to watch list from API" do
   end
   context 'as an visitor' do
     scenario 'fail to add job form API' do
-      visit root_path
+      visit searches_path
 
       fill_in :q, with: "software engineer"
       click_on "Find Jobs"
