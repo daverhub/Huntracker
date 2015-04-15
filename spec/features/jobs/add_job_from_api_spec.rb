@@ -11,11 +11,22 @@ feature "adding job to watch list from API" do
     scenario 'successfully adds job' do
       visit root_path
 
-      fill_in "what:", with: "software engineer"
+      fill_in :q, with: "software engineer"
       click_on "Find Jobs"
-      click_on "Add job"
+      first(:link, "Add job").click
 
-      expect(page).to have_content("Remove Job")
+      expect(page).to have_link("Remove job")
+    end
+  end
+  context 'as an visitor' do
+    scenario 'fail to add job form API' do
+      visit root_path
+
+      fill_in :q, with: "software engineer"
+      click_on "Find Jobs"
+      first(:link, "Add job").click
+
+      expect(page).to have_content("You need to sign in or sign up before continuing.")
     end
   end
 end
