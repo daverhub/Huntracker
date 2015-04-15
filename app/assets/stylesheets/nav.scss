@@ -17,22 +17,27 @@ $bar: #3f3f3f;
 }
 
 .top-bar {
-  background-color: #3f3f3f;
+  background-color: $bar;
 }
+
 h3{
   font-family: $font-sans;
 }
+
 h2{
   color: $white;
 }
+
 body{
   background-color: $background;
   font-family: $font-sans;
 }
+
 body.home{
   background-size: relative;
   background-image: url("http://jarques.me/img/potd_sept_30.jpg");
 }
+
 .container {
   margin-left: 10%;
   margin-right: 5%;
@@ -40,37 +45,47 @@ body.home{
 
 .inline {
   display: inline-block;
+
   input {
     width:280px;
     border-radius: 5%;
   }
+
   label {
       color: orange;
       font-weight: bold;
+
       span{
         color: $purple;
         font-size: 10px;
       }
+
     }
 }
+
 .block {
   display: inline-block;
 }
+
 .form {
   margin-left: 10%;
   display: inline-block;
 }
+
 .centered_bar {
   margin-top: 10em;
   margin-left: 10%;
 }
+
 .home_text{
   text-align: center;
   color: $white;
   font-size: 20px;
 }
+
 .inline_search{
   display: inline-block;
+
   input {
     color: $white;
     background-color: $button-color;
@@ -79,13 +94,16 @@ body.home{
     &:hover {
       background-color: darken($button-color, 30%);
     }
+
   }
 }
+
 .job_deets{
   font-family: Arial,sans-serif;
   font-size: 10pt;
   line-height: 1.3;
 }
+
 .sub-nav {
   margin-left: 18%;
 }
@@ -95,16 +113,13 @@ body.home{
   box-shadow: 0 1px 1px
 }
 
-.text_field {
-  input {
-  }
-}
 .tracking{
   a {
     color: $purple;
     font-size: 12px;
   }
 }
+
 .flash {
   margin-right: 20%;
   text-align: center;
