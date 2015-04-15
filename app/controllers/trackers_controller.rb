@@ -15,7 +15,7 @@ class TrackersController < ApplicationController
     @tracker = Tracker.find(params[:id])
     @tracker.update(tracker_params)
     if @tracker.save
-      flash[:notice] = "Tracking saved"
+      flash[:notice] = "Tracking updated"
       redirect_to job_path(params[:job_id])
     else
       flash[:notice] = @tracker.errors.full_messages.join(", ")
