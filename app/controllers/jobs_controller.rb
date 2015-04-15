@@ -24,18 +24,26 @@ class JobsController < ApplicationController
   end
 
   def create
-      @job = current_user.jobs.new(job_params)
-      @job.job_key = @job.title
-      if @job.save
-        flash[:notice] = "New Job Added"
-        @job.job_key = @job.id
+    @job = current_user.jobs.new(job_params)
+    @job.job_key = @job.title
+    if @job.save
+      flash[:notice] = "New Job Added"
+      @job.job_key = @job.id
+      redirect_to @job
+    else
+      flash[:notice] = @job.errors.full_messages.join(", ")
+      render :new
+    end
+  end
 
-        redirect_to @job
-      else
-        flash[:notice] = @job.errors.full_messages.join(", ")
-        render :new
-      end
-
+  def destroy
+    @job = Job.find(params[:id])
+    if @job.destroy
+      flash[:notice] = 'Job successfully removed'
+    else
+      flash[:alert] = "Something went wrong"
+    end
+    redirect_to jobs_path
   end
 
   protected

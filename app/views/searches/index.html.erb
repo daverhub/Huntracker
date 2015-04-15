@@ -23,7 +23,11 @@
       <p><%= job.company %></p>
       <p><%= job.formatted_location %></p>
       <p><%= job.snippet %></p>
+      <% if current_user && !current_user.jobs.select{ |j| j.job_key == job.job_key}.empty? %>
+      <%= link_to 'Remove job', job_path(job), method: :delete %>
+      <% else %>
       <p><%= link_to "Add job", {:controller => "jobs", :action => "create", :job => job.job_key } %></p>
+      <% end %>
     </div>
   <% end %>
 </ul>
