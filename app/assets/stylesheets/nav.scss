@@ -1,6 +1,12 @@
+$topbar-bg-color: #3498db;
+$button-bg-color: #EA7676;
+$white: #ffffff;
+$background: #e9e9e9;
 $main-color: green;
 $font-sans: Verdana, Arial, Helvetica, sans-serif;
 $button-color: #1E90FF;
+$purple: #808080;
+$bar: #3f3f3f;
 
 #magellan_bar {
   min-width: 0;
@@ -9,6 +15,7 @@ $button-color: #1E90FF;
   margin-left: 5%;
   list-style-type: none;
 }
+
 .top-bar {
   background-color: #3f3f3f;
 }
@@ -16,10 +23,10 @@ h3{
   font-family: $font-sans;
 }
 h2{
-  color: white;
+  color: $white;
 }
 body{
-  background-color: #e9e9e9;
+  background-color: $background;
   font-family: $font-sans;
 }
 body.home{
@@ -41,7 +48,7 @@ body.home{
       color: orange;
       font-weight: bold;
       span{
-        color: gray;
+        color: $purple;
         font-size: 10px;
       }
     }
@@ -59,13 +66,13 @@ body.home{
 }
 .home_text{
   text-align: center;
-  color: white;
+  color: $white;
   font-size: 20px;
 }
 .inline_search{
   display: inline-block;
   input {
-    color: white;
+    color: $white;
     background-color: $button-color;
     border-radius: 10%;
     border: transparent;
@@ -84,7 +91,7 @@ body.home{
 }
 
 .panel{
-  background-color: #fff;
+  background-color: $white;
   box-shadow: 0 1px 1px
 }
 
