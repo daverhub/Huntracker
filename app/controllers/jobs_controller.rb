@@ -7,7 +7,9 @@ class JobsController < ApplicationController
       redirect_to :back
     else
       @jobs = current_user.jobs
+      @jobs= Kaminari.paginate_array(@jobs).page(params[:page]).per(10)
     end
+
   end
 
   def show

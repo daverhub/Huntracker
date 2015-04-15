@@ -12,7 +12,7 @@ feature "Remove job from watch list" do
       job = FactoryGirl.create(:job)
 
       visit job_path(job)
-      click_link "Delete"
+      click_link "Remove Job"
 
       expect(page).to_not have_link(job.title)
     end

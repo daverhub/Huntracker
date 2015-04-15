@@ -1,8 +1,21 @@
 <h3>My Jobs</h3>
-<% @jobs.each do |job| %>
-<p>
-
-  <%= link_to  job.title, job_path(job) %></a>
-
-</p>
-<% end %>
+<div class="panel">
+  <% @jobs.each do |job| %>
+    <div class="panel"><%= link_to  job.title, job_path(job) %>
+      <div class="tracking">
+        <% if !job.tracker.nil? %>
+          <% if job.tracker.applied %>
+            <%= link_to  "Applied", job_path(job) %>
+          <% end %>
+          <% if job.tracker.followup %>
+            | <%= link_to  "Requires follow-up", job_path(job) %>
+          <% end %>
+          <% if job.tracker.interviewed %>
+            | <%= link_to  "Interviewed", job_path(job) %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
+<%= paginate @jobs %>

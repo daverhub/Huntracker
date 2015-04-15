@@ -1,6 +1,8 @@
-<strong><%= @job.title %></strong>
-<p><%= @job.company %></p>
-<p><%= link_to "view job", @job.url, target: "_blank" %></p>
-<p><%= @job.description %></p>
-<%= link_to 'Delete', job_path(@job), method: :delete, class: "button tiny alert" %>
+<div class="panel">
+  <strong><%= @job.title %></strong>
+  <p><%= @job.company %></p>
+  <p><%= @job.description %></p>
+  <%= link_to "View Job", @job.url, target: "_blank" %> |
+  <%= link_to 'Remove Job', job_path(@job), method: :delete %>
+</div>
 <%= render "trackers/form" %>
