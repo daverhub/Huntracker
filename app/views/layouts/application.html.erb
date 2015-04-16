@@ -25,13 +25,14 @@
       </ul>
     </section>
   </nav>
-  <dl class="sub-nav">
-    <dd><a href="/">Home</a></dd>
-    <dd><a href="/jobs">My Jobs</a></dd>
-    <dd><a href="/jobs/new">Add Job</a></dd>
-    <dd><a href="/searches">Search</a></dd>
-  </dl>
-
+  <div clsss="sub">
+    <dl class="sub-nav">
+      <dd><a href="/">Home</a></dd>
+      <dd><a href="/jobs">My Jobs</a></dd>
+      <dd><a href="/jobs/new">Add Job</a></dd>
+      <dd><a href="/searches">Search</a></dd>
+    </dl>
+  </div>
     <div class="container">
     <%- flash.each do |key, value| -%>
       <div class="flash">

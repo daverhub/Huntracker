@@ -3,12 +3,16 @@ $button-bg-color: #EA7676;
 $white: #ffffff;
 $background: #e9e9e9;
 $main-color: green;
-$font-sans: Verdana, Arial, Helvetica, sans-serif;
+$font-sans: Special Elite;
 $button-color: #1E90FF;
 $purple: #CD29C0;
 $bar: #3f3f3f;
 $grey: #aaa;
-$orange :#ffa500;
+$linkedin: #D7D7D7;
+$orange: #ffa500;
+$black: #000000;
+@import url(http://fonts.googleapis.com/css?family=Courgette);
+@import url(http://fonts.googleapis.com/css?family=Special+Elite);
 
 #magellan_bar {
   min-width: 0;
@@ -20,6 +24,10 @@ $orange :#ffa500;
 
 .top-bar {
   background-color: $bar;
+  a {
+  font-family: Courgette;
+  font-size: 38px;
+  }
 }
 
 h3 {
@@ -36,8 +44,8 @@ body{
 }
 
 body.home {
-  background-size: relative;
-  background-image: url("http://jarques.me/img/potd_sept_30.jpg");
+  background-size: 88em;
+  background-image: url("http://static4.businessinsider.com/image/53a1eb91ecad045e6987bc69-1200/its-hard-to-say-whether-this-is-really-an-office-or-just-a-hip-cafe.jpg");
 }
 
 .container {
@@ -90,7 +98,8 @@ body.home {
 
 .home_text {
   text-align: center;
-  color: $white;
+  text-shadow: 2px 0 0 $black;
+  color: $orange;
   font-size: 20px;
 }
 
@@ -116,7 +125,11 @@ body.home {
 }
 
 .sub-nav {
-  margin-left: 18%;
+  dd a {
+    color: $linkedin;
+    font-family: $font-sans;
+  }
+  background-color: $black;
 }
 
 .panel{
