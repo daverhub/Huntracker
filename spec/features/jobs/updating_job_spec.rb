@@ -8,7 +8,11 @@ feature "updating an job" do
       sign_in_as user
     end
     scenario "update page correctly populates information" do
-      job = FactoryGirl.create(:job, title: 'software engineer', description: 'greatest job description text', user: user )
+      job = FactoryGirl.create(:job,
+        title: 'software engineer',
+        description: 'greatest job description text',
+        user: user
+      )
       visit job_path(job)
 
       click_on "Edit Job"
