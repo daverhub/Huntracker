@@ -29,7 +29,7 @@
       </div>
         <div class="add_remove">
         <% if current_user && !current_user.jobs.select{ |j| j.job_key == job.job_key}.empty? %>
-          <%= link_to 'Remove job', job_path(job), method: :delete %>
+          <%= link_to 'Remove job', job_path(job.job_key), method: :delete %>
         <% else %>
           <%= link_to "Add job", {:controller => "jobs", :action => "create", :job => job.job_key } %>
         <% end %>
