@@ -5,7 +5,7 @@ $background: #e9e9e9;
 $main-color: green;
 $font-sans: Verdana, Arial, Helvetica, sans-serif;
 $button-color: #1E90FF;
-$purple: #808080;
+$purple: #CD29C0;
 $bar: #3f3f3f;
 
 #magellan_bar {
@@ -65,6 +65,11 @@ body.home {
 
 .block {
   display: inline-block;
+  input {
+    width:100px;
+    border-radius: 5%;
+  }
+
 }
 
 .form {

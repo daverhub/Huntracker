@@ -1,34 +1,34 @@
+<div class="panel">
 <%= form_for @job do |f| %>
   <div class="row">
-  <div class="medium-5 large-5 columns">
-    <%= f.label :title, "Title:" %>
-    <%= f.text_field :title %>
+    <div class="large-7 columns">
+      <%= f.label :title, "Title:" %>
+      <%= f.text_field :title %>
 
-    <%= f.label :company, "Company:" %>
-    <%= f.text_field :company %>
+      <%= f.label :company, "Company:" %>
+      <%= f.text_field :company %>
 
-    <%= f.label :url, "Url:" %>
-    <%= f.text_field :url %>
+      <%= f.label :url, "Url:" %>
+      <%= f.text_field :url %>
+    </div>
+    <div class="block">
+      <%= f.label :city, "city:" %>
+      <%= f.text_field :city %>
 
-    <%= f.label :city, "city:" %>
-    <%= f.text_field :city %>
+      <%= f.label :state, "state:" %>
+      <%= f.text_field :state %>
 
-    <%= f.label :state, "state:" %>
-    <%= f.text_field :state %>
-
-    <%= f.label :country, "country:" %>
-    <%= f.text_field :country %>
-
-    <%= f.label :description %>
-    <%= f.text_area :description %>
+      <%= f.label :country, "country:" %>
+      <%= f.text_field :country %>
+    </div>
+    <div class="large-9 columns">
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+    </div>
   </div>
-</div>
-
-<div class="row">
-  <div class="medium-10 large-10 columns"></div>
-  <div class="medium-2 large-2 columns">
+  <div class="row push-7">
     <%= f.submit (f.object.new_record? ? "Add Job" : "Edit review"),
       class: "button tiny success" %>
   </div>
-  </div>
 <%-end-%>
+</div>
