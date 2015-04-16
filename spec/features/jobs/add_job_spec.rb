@@ -9,7 +9,8 @@ feature "adding job to watch list" do
     end
 
     scenario 'successfully adds job' do
-      visit new_job_path
+      visit root_path
+      click_on "Add Job"
 
       fill_in "Title", with: "software engineer"
       fill_in "Company", with: "Launch Academy"
@@ -19,6 +20,7 @@ feature "adding job to watch list" do
       expect(page).to have_content("New Job Added")
       expect(page).to have_content("software engineer")
     end
+
     scenario 'fail to add job' do
       visit new_job_path
 
