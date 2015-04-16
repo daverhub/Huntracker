@@ -8,6 +8,7 @@ $button-color: #1E90FF;
 $purple: #CD29C0;
 $bar: #3f3f3f;
 $grey: #aaa;
+$orange :#ffa500;
 
 #magellan_bar {
   min-width: 0;
@@ -57,7 +58,7 @@ body.home {
   }
 
   label {
-      color: orange;
+      color: $orange;
       font-weight: bold;
 
       span {
