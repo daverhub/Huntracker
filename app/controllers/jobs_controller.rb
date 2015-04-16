@@ -54,8 +54,8 @@ class JobsController < ApplicationController
   end
 
   def destroy
-    @job = Job.find(params[:id])
-    if @job.destroy
+    @job = Job.where(job_key: params[:id])
+    if @job.first.destroy
       flash[:notice] = 'Job successfully removed'
     else
       flash[:alert] = "Something went wrong"
