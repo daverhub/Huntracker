@@ -8,7 +8,7 @@ $button-color: #1E90FF;
 $purple: #CD29C0;
 $bar: #3f3f3f;
 $grey: #aaa;
-$linkedin: #D7D7D7;
+$linkedin: #d7d7d7;
 $orange: #ffa500;
 $black: #000000;
 @import url(http://fonts.googleapis.com/css?family=Special+Elite);
@@ -23,10 +23,11 @@ $black: #000000;
 
 .top-bar {
   background-color: $bar;
-  a {
-  font-family: Courgette;
-  font-size: 38px;
-  }
+
+    a {
+    font-family: Courgette;
+    font-size: 38px;
+    }
 }
 
 h3 {
@@ -43,8 +44,8 @@ body{
 }
 
 body.home {
-  background-size: 88em;
   background-image: url("http://static4.businessinsider.com/image/53a1eb91ecad045e6987bc69-1200/its-hard-to-say-whether-this-is-really-an-office-or-just-a-hip-cafe.jpg");
+  background-size: 88em;
 }
 
 .container {
