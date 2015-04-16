@@ -1,7 +1,5 @@
 class User < ActiveRecord::Base
   has_many :jobs
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable
@@ -14,7 +12,6 @@ class User < ActiveRecord::Base
      if registered_user
        return registered_user
      else
-
        user = User.create(name:auth.info.first_name,
                            provider:auth.provider,
                            uid:auth.uid,
@@ -22,7 +19,6 @@ class User < ActiveRecord::Base
                            password:Devise.friendly_token[0,20],
                          )
      end
-
    end
  end
 end

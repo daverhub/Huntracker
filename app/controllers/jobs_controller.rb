@@ -38,6 +38,21 @@ class JobsController < ApplicationController
     end
   end
 
+  def edit
+    @job = Job.find(params[:id])
+  end
+
+  def update
+    @job = Job.find(params[:id])
+    if @job.update(job_params)
+      flash[:notice] = "Job updated"
+      redirect_to @job
+    else
+      flash[:alert] = @job.errors.full_messages.join(", ")
+      render :edit
+    end
+  end
+
   def destroy
     @job = Job.find(params[:id])
     if @job.destroy

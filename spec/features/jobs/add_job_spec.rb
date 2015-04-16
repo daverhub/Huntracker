@@ -13,7 +13,7 @@ feature "adding job to watch list" do
 
       fill_in "Title", with: "software engineer"
       fill_in "Company", with: "Launch Academy"
-      click_on "Add Job"
+      click_on "Save Job"
 
 
       expect(page).to have_content("New Job Added")
@@ -24,7 +24,7 @@ feature "adding job to watch list" do
 
       fill_in "Title", with: ""
       fill_in "Company", with: ""
-      click_on "Add Job"
+      click_on "Save Job"
 
       expect(page).to have_content("Title can't be blank")
       expect(page).to have_content("Company can't be blank")
