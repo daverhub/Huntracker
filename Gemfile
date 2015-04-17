@@ -16,6 +16,7 @@ gem 'kaminari'
 gem 'omniauth'
 gem 'omniauth-linkedin'
 gem 'dotenv-rails'
+gem 'rails_12factor'
 
 group :development, :test do
   gem 'byebug'

@@ -21,7 +21,8 @@ Devise.setup do |config|
   # available as additional gems.
   require 'devise/orm/active_record'
   require 'omniauth-linkedin'
-  config.omniauth :linkedin, ENV["APP_ID"], ENV["APP_SECRET"]
+  config.omniauth :linkedin, ENV["APP_ID"], ENV["APP_SECRET"],
+  :client_options => {:ssl => {:ca_path => '/usr/lib/ssl/certs/ca-certificates.crt'}}
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is
   # just :email. You can configure it to use [:username, :subdomain], so for
