@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   has_many :jobs
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
-         :omniauthable
+         :omniauthable, :omniauth_providers => [:linkedin]
  def self.connect_to_linkedin(auth, signed_in_resource=nil)
    user = User.where(:provider => auth.provider, :uid => auth.uid).first
    if user
