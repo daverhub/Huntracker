@@ -14,11 +14,13 @@ class JobsController < ApplicationController
 
   def show
     @job = Job.find(params[:id])
+    @comments = @job.comments
     if @job.tracker
       @tracker = @job.tracker
     else
       @tracker = Tracker.new
     end
+    @comment = Comment.new
   end
 
   def new

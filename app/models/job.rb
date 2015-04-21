@@ -5,6 +5,7 @@ class Job < ActiveRecord::Base
   validates :job_key, uniqueness: true
   belongs_to :user
   has_one :tracker
+  has_many :comments
 
   def save_data_from_indeed(job)
     self.title = job.job_title

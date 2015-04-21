@@ -5,5 +5,20 @@
   <%= link_to "View Job", @job.url, target: "_blank" %> |
   <%= link_to 'Remove Job', job_path(@job.job_key), method: :delete %> |
   <%= link_to "Edit Job", edit_job_path(@job) %>
+  <%= render "trackers/form" %>
 </div>
-<%= render "trackers/form" %>
+
+<div class ="row">
+  <%= render "comments/form" %>
+</div>
+
+<% if @comments %>
+  <% @comments.each do |comment| %>
+    <div class="panel callout radius">
+      <%= comment.body %>
+      <div class="row push-10">
+        <%= comment.user.name %>
+      </div>
+    </div>
+  <% end %>
+<% end %>
