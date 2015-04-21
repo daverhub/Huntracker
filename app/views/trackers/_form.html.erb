@@ -1,25 +1,21 @@
 <%= form_for [@job, @tracker] do |f| %>
   <div class="row">
     <div class="large-10 columns">
-      <div class="panel">
-        <%= f.check_box :applied %>
-        <%= f.label :applied, "Applied" %>
-        <%= f.check_box :followup %>
-        <%= f.label :followup, "Requires Follow-up" %>
-        <%= f.check_box :interviewed %>
-        <%= f.label :interviewed, "interviewed" %>
-      </div>
+      <%= f.check_box :applied %>
+      <%= f.label :applied, "Applied" %>
+      <%= f.check_box :followup %>
+      <%= f.label :followup, "Requires Follow-up" %>
+      <%= f.check_box :interviewed %>
+      <%= f.label :interviewed, "interviewed" %>
       <div class="text_field">
         <%= f.label :notes, "Notes:" %>
         <%= f.text_area :notes %>
+        <div class="push-10 columns">
+          <%= f.submit (f.object.new_record? ? "Save" : "update"),
+            class: "button tiny success" %>
+        </div>
+
       </div>
     </div>
   </div>
-
-
-  <div class="medium-2 large-2 push-8 columns">
-    <%= f.submit (f.object.new_record? ? "Save" : "update"),
-      class: "button tiny success" %>
-  </div>
-
 <%-end-%>

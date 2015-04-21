@@ -1,0 +1,8 @@
+<%= form_for [@job, @comment] do |f| %>
+  <%= f.label :body, "Comment:" %>
+  <%= f.text_area :body %>
+  <div class="push-9 columns">
+  <%= f.submit (f.object.new_record? ? "Submit comment" : "Edit comment"),
+      class: "button tiny success" %>
+  <%-end-%>
+  </div>
