@@ -3,10 +3,12 @@
     <strong><%= @job.title %></strong>
     <p><%= @job.company %></p>
     <p><%= @job.description %></p>
-    <%= link_to "View Job", @job.url, target: "_blank" %> |
-    <%= link_to 'Remove Job', job_path(@job.job_key), method: :delete %> |
+    <%= link_to "View Job", @job.url, target: "_blank" %>
+    <% if current_user == @job.user %>
+    |<%= link_to 'Remove Job', job_path(@job.job_key), method: :delete %> |
     <%= link_to "Edit Job", edit_job_path(@job) %>
     <p><%= render "trackers/form" %></p>
+    <% end %>
   </div>
 </div>
 
