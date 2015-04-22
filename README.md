@@ -6,13 +6,15 @@ Is a Job search tracker, search and saves jobs while providing progress tracking
 
 Rails version '4.2.1'
 
-built using TDD, RSpec and Capybara
+Accesses the Indeed API, requires API keys
 
-Access the Indeed API
 To run:
 
-Git Clone: https://github.com/daverhub/Huntracker.git
-Rails S
+1. Git Clone: https://github.com/daverhub/Huntracker.git
+2. Create a publisher account to get API_KEY here:
+    http://www.indeed.com/jsp/apiinfo.jsp
+3. create env file and add API_key
+4. Run rails server
 
 Features:
 
