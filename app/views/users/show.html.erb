@@ -1,5 +1,12 @@
 <h3><% @user.name %></h3>
 
 <% @jobs.each do |job| %>
-  <%= link_to job.title, job_path(job) %>
+  <div class="panel">
+    <div class="job_deets">
+      <strong><%= link_to job.title, job_path(job) %></strong>
+      <p><%= job.company %></p>
+      <p><%= job.description %></p>
+      <%= link_to "View Job", job.url, target: "_blank" %>
+    </div>
+  </div>
 <% end %>
