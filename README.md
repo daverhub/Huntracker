@@ -1,29 +1,18 @@
-== README
+Huntracker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Is a Job search tracker, search and saves jobs while providing progress tracking functionality
 
-Things you may want to cover:
+Rails version '4.2.1'
 
-* Ruby version
+built using TDD, RSpec and Capybara
 
-* System dependencies
+Access the Indeed API
 
-* Configuration
+![alt](http://i.imgur.com/oBWe09J.png)
 
-* Database creation
+A Search using the IndeedAPI
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![alt](http://i.imgur.com/TdXjUqV.png)
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
 [![Build Status](https://travis-ci.org/daverhub/Huntracker.svg?branch=master)](https://travis-ci.org/daverhub/Huntracker) [![Code Climate](https://codeclimate.com/github/daverhub/Huntracker/badges/gpa.svg)](https://codeclimate.com/github/daverhub/Huntracker) [![Coverage Status](https://coveralls.io/repos/daverhub/Huntracker/badge.svg?branch=master)](https://coveralls.io/r/daverhub/Huntracker?branch=master)
