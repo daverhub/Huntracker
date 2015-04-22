@@ -9,7 +9,7 @@ feature "Remove job from watch list" do
     end
 
     scenario 'successfully Remove job' do
-      job = FactoryGirl.create(:job)
+      job = FactoryGirl.create(:job, user: user)
 
       visit job_path(job)
       click_link "Remove Job"
