@@ -1,20 +1,21 @@
 @import "variables";
 
 .home_text {
-  text-align: center;
-  text-shadow: 2px 0 0 $black;
   color: $white;
   font-size: 28px;
+  text-align: center;
+  text-shadow: 2px 0 0 $black;
 }
 
 .inline_search {
   display: inline-block;
 
   input {
-    color: $white;
     background-color: $button-color;
-    border-radius: 10%;
     border: transparent;
+    border-radius: 10%;
+    color: $white;
+
     &:hover {
       background-color: darken($button-color, 30%);
     }
