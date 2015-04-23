@@ -1,0 +1,19 @@
+@import "variables";
+
+footer {
+  box-sizing: border-box;
+  padding: 15px;
+  font-size: 14px;
+  line-height: 20px;
+  background: $bar;
+  position:relative;
+  height: 50px;
+  margin-top: -50px;
+  clear: both;
+  color: $white;
+
+    .container {
+      text-align: center;
+      padding-left: 38em;
+    }
+}
