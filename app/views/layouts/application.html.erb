@@ -34,12 +34,12 @@
       <dd><a href="/searches">Search</a></dd>
     </dl>
   </div>
-    <div class="container">
-    <%- flash.each do |key, value| -%>
-      <div class="flash">
-        <%= value %>
-      </div>
-    <%- end -%>
+  <%- flash.each do |key, value| -%>
+    <div class="flash">
+      <%= value %>
+    </div>
+  <%- end -%>
+  <div class="container">
     <div class="large-8 push-1 column">
       <%= yield %>
     </div>
